@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1f2937;
+  background: #f8fafc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --background: 210 40% 98%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 173 80% 35%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent-token: 173 80% 35%;
+  --accent-token-foreground: 210 40% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 173 80% 35%;
+  --radius: 0.7rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 173 80% 40%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent-token: 173 80% 40%;
+  --accent-token-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 173 80% 40%;
+}
+
+body {
+  margin: 0;
+}
+
+.settings-ui-scale {
+  zoom: 1.25;
+}
+
+@supports not (zoom: 1) {
+  .settings-ui-scale {
+    transform: scale(1.25);
+    transform-origin: top center;
+    width: 80%;
+  }
+}
+
+.activity-calendar {
+  --rdp-accent-color: #0f766e;
+  --rdp-day-width: 34px;
+  --rdp-day-height: 34px;
+  --rdp-day_button-border-radius: 10px;
+  --rdp-animation_duration: 0.18s;
+}
+
+.activity-calendar .rdp-root {
+  margin: 0;
+  font-size: 12px;
+}
+
+.activity-calendar .rdp-month_caption {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.activity-calendar .rdp-weekday {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.activity-calendar .rdp-day_button {
+  border: 0;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.activity-calendar .rdp-day_button:hover {
+  background-color: #f1f5f9;
+}
+
+.activity-calendar .rdp-selected .rdp-day_button {
+  background-color: #0f766e;
+  color: #ffffff;
+}
+
+.activity-calendar-dark {
+  --rdp-accent-color: #14b8a6;
+}
+
+.activity-calendar-dark .rdp-month_caption {
+  color: #e2e8f0;
+}
+
+.activity-calendar-dark .rdp-weekday {
+  color: #94a3b8;
+}
+
+.activity-calendar-dark .rdp-day_button {
+  color: #e2e8f0;
+}
+
+.activity-calendar-dark .rdp-day_button:hover {
+  background-color: #334155;
+}
+
+.modern-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.65) transparent;
+}
+
+.modern-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.modern-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modern-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.75), rgba(100, 116, 139, 0.85));
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.modern-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.95), rgba(100, 116, 139, 1));
+}
