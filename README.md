@@ -224,22 +224,5 @@ Print this checklist result + any false positives/issues found to inform post-MV
 - **store/**: Zustand state management
 - **types/**: TypeScript message/event definitions
 
-## Known Limitations (MVP)
 
-- **Interruption rules are basic**: Currently uses URL count + duration + revisits. Does not detect:
-  - Intentional task switches (false positives possible)
-  - Passive browsing that looks like work (e.g., long documents)
-  - Form abandonment without explicit tracking integration
-  
-- **No cloud sync**: All data is local-only. Clearing browser data clears history.
-
-- **Browser detection**: Always shows "Chrome" because extension only runs in Chrome-based browsers (Chromium/Edge).
-
-## Future Enhancements
-
-- [ ] Cross-device sync (optional cloud backend)
-- [ ] Per-domain interruption rules (e.g., GitHub issues are not "interrupted")
-- [ ] Form auto-save detection (no extension needed, just detect changes)
-- [ ] Integration with calendar/task managers
-- [ ] ML-based interruption scoring
 
